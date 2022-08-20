@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
+const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -51,12 +52,19 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFileSync(fileName, data);
+  fs.writeFileSync(fileName, data, (err) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log('Complete!');
+  });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-  writeToFile('fileName.txt', 'lala');
+  inquirer.prompt(questions).then((answers) => {
+    writeToFile('README.md', generateMarkdown({ ...answers }));
+  });
 }
 
 // Function call to initialize app

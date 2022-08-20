@@ -24,6 +24,10 @@ function renderLicenseLink(license) {
     case 'GPL':
       licenseLink = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
       break;
+    case 'Apache':
+      licenseLink = 'https://www.apache.org/licenses/LICENSE-2.0.html';
+      break;
+    default:
       licenseLink = '';
       break;
   }
