@@ -9,44 +9,49 @@ const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 const questions = [
   {
     type: 'input',
-    name: 'project-title',
-    message: 'What is the title of your project?',
+    name: 'title',
+    message: 'What is the title of your project? (Required)',
   },
   {
     type: 'input',
     name: 'description',
-    message: 'Please provide a description of the project',
+    message: 'Please provide a description of the project (Required)',
   },
   {
-    type: 'input',
-    name: 'table-of-contents',
+    type: 'table',
+    name: 'tableofcontents',
     message: 'Insert a Table of Contents',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: 'Please select the license you used for this project.',
+    choices: ['MIT', 'BSD', 'GPL', 'Apache', 'None'],
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'Please provide installation instructions',
+    message: 'What are the installation instructions?',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'Please provide usage information',
+    message: 'Please provide technologies used',
   },
   {
     type: 'input',
-    name: 'contributing',
+    name: 'contributors',
     message: 'Please provide a list of contributors to the project',
   },
   {
     type: 'input',
     name: 'test',
-    message: 'Insert test here',
+    message: 'Insert test instructions here:',
   },
   {
     type: 'input',
     name: 'questions',
-    message:
-      'Enter your GitHub username with link to your GitHub profile, email address and instructions on how to reach you with additional questions',
+    message: 'Type in your Github username and email address',
   },
 ];
 
