@@ -78,9 +78,10 @@ function generateMarkdown(data) {
   ## Test
   ${data.test}
   ## Questions
-  You can check out my GitHub link below: </br>
+  GitHub profile link below: </br>
   https://github.com/${data.github}
   <br>
+  Feel free to email me as well: 
   ${data.email}
   </br>`;
 }
