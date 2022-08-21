@@ -3,24 +3,24 @@ const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
+const license = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
 
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: 'input',
     name: 'title',
-    message: 'What is the title of your project? (Required)',
+    message: 'What is the title of your project?',
   },
   {
     type: 'input',
     name: 'description',
-    message: 'Please provide a description of the project (Required)',
+    message: 'Please provide a description of the project',
   },
   {
     type: 'table',
     name: 'tableofcontents',
-    message: 'Insert a Table of Contents',
+    message: 'Create a Table of Contents',
   },
   {
     type: 'list',

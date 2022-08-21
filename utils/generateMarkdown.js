@@ -37,46 +37,48 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  licenseSection = '';
-
-  if (license != 'None') {
-    licenseSection += '##License/n';
-    licenseSection +=
-      'Please see' +
-      renderLicenseLink(license) +
-      ' to get detailed information for this license\n';
-  }
-  return licenseSection;
+  let badge = renderLicenseBadge(license);
+  let link = renderLicenseLink(license);
+  return `${badge}<br>The license used for this project is the ${license} license. For additional information click here: ${link}`;
 }
+if (license != 'None') {
+  licenseSection += '##License/n';
+  licenseSection +=
+    'Please see' +
+    renderLicenseLink(license) +
+    'to get detailed information for this license';
+}
+return licenseSection;
 
-function renderTable(tableofcontents) {
-  if (tableofcontents) {
-    return `## Table of Contents
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  return `# ${data.title} ${renderLicenseBadge(data.license)}
+
+  ## Description
+  ${data.description}
+
+  ## License
+  ${renderLicenseSection(data.license)}
+
+  ## Table of Contents
     -[Installation] (#installation)
     -[Usage] (#usage)
     -[Contributors] (#contributors)
     -[Test] (#test)
-    -[Questions] (#questions)`;
-  }
-}
+    -[Questions] (#questions);
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-  ## Description
-  ${data.description}
-  ## License
-  ${data.license}
-  ${renderTable(data.tableofcontents)}
   ## Installation
   ${data.installation}
+
   ## Usage
   ${data.usage}
+
   ## Contributors
   ${data.contributors}
+
   ## Test
   ${data.test}
+
   ## Questions
   GitHub profile link below: </br>
   https://github.com/${data.github}
