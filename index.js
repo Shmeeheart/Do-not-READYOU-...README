@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const license = ['None', 'MIT', 'BSD', 'GPL', 'Apache'];
+const license = ['apache', 'mit', 'gpl', ' '];
 
 // TODO: Create an array of questions for user input
 const questions = [

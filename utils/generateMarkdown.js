@@ -1,37 +1,29 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let badge = '';
-  if (license != 'None') {
-    badge = '![License Badge] (https://shields.io/badge/license';
+  if (license == 'apache') {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+  } else if (license == 'mit') {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  } else if (license == 'gpl') {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+  } else {
+    return ``;
   }
-
-  return badge;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let licenseLink;
-
-  switch (license) {
-    case 'MIT':
-      licenseLink = 'https://mit-license.org/';
-      break;
-    case 'BSD':
-      licenseLink = 'https://opensource.org/licenses/BSD-3-Clause';
-      break;
-    case 'GPL':
-      licenseLink = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
-      break;
-    case 'Apache':
-      licenseLink = 'https://www.apache.org/licenses/LICENSE-2.0.html';
-      break;
-    default:
-      licenseLink = '';
-      break;
+  if (license == 'apache') {
+    return `[Apache Software License](https://opensource.org/licenses/Apache-2.0)`;
+  } else if (license == 'mit') {
+    return `[MIT Software License](https://opensource.org/licenses/MIT)`;
+  } else if (license == 'gnu') {
+    return `[GNU Software License](https://www.gnu.org/licenses/gpl-3.0)`;
+  } else {
+    return ``;
   }
-  return licenseLink;
 }
 
 // TODO: Create a function that returns the license section of README
@@ -41,14 +33,6 @@ function renderLicenseSection(license) {
   let link = renderLicenseLink(license);
   return `${badge}<br>The license used for this project is the ${license} license. For additional information click here: ${link}`;
 }
-if (license != 'None') {
-  licenseSection += '##License/n';
-  licenseSection +=
-    'Please see' +
-    renderLicenseLink(license) +
-    'to get detailed information for this license';
-}
-return licenseSection;
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
