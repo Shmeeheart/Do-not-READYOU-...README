@@ -1,9 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const path = require('path');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const license = ['apache', 'mit', 'gpl', ' '];
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -18,15 +16,18 @@ const questions = [
     message: 'Please provide a description of the project',
   },
   {
-    type: 'table',
-    name: 'tableofcontents',
-    message: 'Create a Table of Contents',
-  },
-  {
     type: 'list',
     name: 'license',
     message: 'Please select the license you used for this project.',
     choices: ['MIT', 'BSD', 'GPL', 'Apache', 'None'],
+    validate: (license) => {
+      if (license) {
+        return true;
+      } else {
+        console.log('You must select a license');
+        return false;
+      }
+    },
   },
   {
     type: 'input',

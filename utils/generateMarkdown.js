@@ -31,25 +31,25 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   let badge = renderLicenseBadge(license);
   let link = renderLicenseLink(license);
-  return `${badge}<br>The license used for this project is the ${license} license. For additional information click here: ${link}`;
+  return `${badge}`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} ${renderLicenseBadge(data.license)}
+  return `# ${data.title} ${renderLicenseSection(data.license)}
 
   ## Description
   ${data.description}
 
   ## License
-  ${renderLicenseSection(data.license)}
+  ![](https://img.shields.io/badge/license-${data.license}${data.link}-blue)
 
   ## Table of Contents
-    -[Installation] (#installation)
-    -[Usage] (#usage)
-    -[Contributors] (#contributors)
-    -[Test] (#test)
-    -[Questions] (#questions);
+    -[Installation](#installation)
+    -[Usage](#usage)
+    -[Contributors](#contributors)
+    -[Test](#test)
+    -[Questions](#questions)
 
   ## Installation
   ${data.installation}
