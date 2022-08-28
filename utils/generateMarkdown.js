@@ -30,7 +30,6 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let badge = renderLicenseBadge(license);
-  let link = renderLicenseLink(license);
   return `${badge}`;
 }
 
@@ -45,11 +44,12 @@ function generateMarkdown(data) {
   ![](https://img.shields.io/badge/license-${data.license}${data.link}-blue)
 
   ## Table of Contents
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Contributors](#contributors)
-    -[Test](#test)
-    -[Questions](#questions)
+  1. [Description](#description)
+  2. [Usage](#usage)
+  3. [License](#license)  
+  4. [Contributing](#contributing)
+  5. [Tests](#tests) 
+  6. [Questions](#email) 
 
   ## Installation
   ${data.installation}
