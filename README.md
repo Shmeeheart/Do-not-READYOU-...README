@@ -1,10 +1,10 @@
-# la 
+# Do not READyou...READme 
 
   ## Description
-  la
+  A comprehensive READme generator
 
   ## License
-  ![](https://img.shields.io/badge/license-MITundefined-blue)
+  ![](https://img.shields.io/badge/license-Apacheundefined-blue)
 
   ## Table of Contents
     -[Installation](#installation)
@@ -14,21 +14,21 @@
     -[Questions](#questions)
 
   ## Installation
-  la
+  type in node index.js and answer the questions when prompted
 
   ## Usage
-  la
+  Javascript
 
   ## Contributors
-  la
+  Jennifer Goodwin (Shmeeheart)
 
   ## Test
-  la
+  
 
   ## Questions
   GitHub profile link below: </br>
-  https://github.com/la
+  https://github.com/Shmeeheart
   <br>
   Feel free to email me as well: 
-  la
+  goodwije@gmail.com
   </br>
