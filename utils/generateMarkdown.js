@@ -47,7 +47,7 @@ function generateMarkdown(data) {
   1. [Description](#description)
   2. [Usage](#usage)
   3. [License](#license)  
-  4. [Contributing](#contributing)
+  4. [Contributors](#contributors)
   5. [Tests](#tests) 
   6. [Questions](#email) 
 
