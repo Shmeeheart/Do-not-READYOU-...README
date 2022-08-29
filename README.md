@@ -1,7 +1,7 @@
-# Do Not READyou...READme 
+# Do not READyou...READme 
 
   ## Description
-  A comprehensive tool to create a READme for each of your future projects
+  Comprehensive generator to create a READme for any future projects
 
   ## License
   ![](https://img.shields.io/badge/license-GPLundefined-blue)
@@ -15,7 +15,7 @@
   6. [Questions](#email) 
 
   ## Installation
-  type in node index.js
+  type in node index.js to start the application. Answer the questions as you are prompted.
 
   ## Usage
   Javascript
@@ -24,7 +24,7 @@
   Jennifer Goodwin (Shmeeheart)
 
   ## Test
-  test index.js
+  node run test
 
   ## Questions
   GitHub profile link below: </br>
